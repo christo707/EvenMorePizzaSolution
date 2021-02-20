@@ -14,7 +14,7 @@ public class Solution {
 	public static void main(String[] args) {
 		long startTime = System.nanoTime();
 		//String filename = "a_example" "b_little_bit_of_everything.in" "c_many_ingredients.in" "d_many_pizzas.in" "e_many_teams.in";
-		String filename = "c_many_ingredients.in";
+		String filename = "e_many_teams.in";
 		EvenMorePizza evenMorePizza = Utility.readInput(filename);
 		Submission result = solve(evenMorePizza);
 		Utility.writeOutput(result, filename);
