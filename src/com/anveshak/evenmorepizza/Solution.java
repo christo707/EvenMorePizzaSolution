@@ -14,8 +14,9 @@ public class Solution {
 	public static void main(String[] args) {
 		long startTime = System.nanoTime();
 		//String filename = "a_example" "b_little_bit_of_everything.in" "c_many_ingredients.in" "d_many_pizzas.in" "e_many_teams.in";
-		String filename = "e_many_teams.in";
+		String filename = "a_example";
 		EvenMorePizza evenMorePizza = Utility.readInput(filename);
+		
 		Submission result = solve(evenMorePizza);
 		Utility.writeOutput(result, filename);
 		
@@ -97,14 +98,22 @@ public class Solution {
 			pizzas.removeIf(p -> p.getIndex() == bestOption.getIndex());
 		}
 		evenMorePizza.setPizzas(pizzas);
-		
+		System.out.println(delivery);
 		return delivery;
 	}
 
 	private static Pizza getBestOptionFromRemainingPizzas(List<Pizza> pizzas, List<String> ingUsed) {
+		// For case with large no of ingredients
+		//long minScore = Long.MIN_VALUE;
 		long minScore = Long.MAX_VALUE;
 		Pizza bestOption = null;
 		for(int i = 0; i < pizzas.size(); i++) {
+//			For case with large no of ingredients
+//			long score = pizzas.get(i).getIngredients().stream().filter(ing -> ingUsed.contains(ing)).count() * pizzas.get(i).getTotalIngredeients();
+//			if(score > minScore) {
+//				minScore = score;
+//				bestOption = pizzas.get(i);
+//			}
 			long score = pizzas.get(i).getIngredients().stream().filter(ing -> ingUsed.contains(ing)).count();
 			if(score < minScore) {
 				minScore = score;
