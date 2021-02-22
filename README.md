@@ -14,7 +14,7 @@ e_many_teams                  - 1656.413 seconds
 
 A – Example                          - 49 points
 B – A little bit of everything       - 12,029 points
-C – Many ingredients                 - 534,097,630 points
+C – Many ingredients                 - 651,477,457 points
 D – Many pizzas                      - 8,061,427 points
 E – Many teams                       - 10,988,056 points
-Total score                          - 553,159,191 points
+Total score                          - 670,539,018 points
